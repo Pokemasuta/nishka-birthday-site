@@ -1,0 +1,530 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Nishka</title>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Josefin Sans', sans-serif;
+      background: linear-gradient(to bottom right, #fff1f8, #f9f5ff);
+      overflow-x: hidden;
+      cursor: url('https://cur.cursors-4u.net/cursors/cur-2/cur114.cur'), auto;
+      transition: background 0.5s ease-in-out;
+    }
+    #loader {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-size: 1.8rem;
+      color: #5c3d8c;
+      text-align: center;
+      flex-direction: column;
+    }
+    .hidden { display: none; }
+    .main-content {
+      padding: 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin-top: 100px;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 18px;
+      background-color: #6e44ff;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+    button:hover {
+      transform: scale(1.05);
+    }
+    section {
+      margin: 50px auto;
+      max-width: 900px;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+    .timeline-entry, .archive-entry {
+      margin-bottom: 20px;
+    }
+    .timeline-entry img, .archive-entry img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .floating-emoji {
+      position: fixed;
+      animation: floatUp 6s infinite;
+      font-size: 24px;
+      z-index: 999;
+    }
+    @keyframes floatUp {
+      0% { bottom: 0; opacity: 0; }
+      50% { opacity: 1; }
+      100% { bottom: 100%; opacity: 0; }
+    }
+    .generator, .star-map, .tracker, .cake, .unsent, .final-message, .poem {
+      padding: 20px;
+      border: 2px dashed #ccc;
+      border-radius: 10px;
+      margin-top: 30px;
+    }
+    .poem-text {
+      white-space: pre-line;
+      line-height: 1.6;
+      font-size: 1.1em;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div id="loader">
+    Typing from heart...<br>
+    <span id="loaderLine">Unpacking hehehe...</span>
+  </div>
+  <div class="hidden main-content" id="content">
+    <div class="center">
+      <h1>Welcome to Something Just for You</h1>
+      <button onclick="document.getElementById('surprise').scrollIntoView({ behavior: 'smooth' });">Unlock Your Surprise</button>
+    </div><section id="surprise">
+  <h2>Hehehe Tracker</h2>
+  <div class="tracker">
+    <p>You’ve said "hehehe" <strong>46</strong> times since we started talking. Just one more reason why you’re unforgettable.</p>
+  </div>
+
+  <h2>Star Map</h2>
+  <div class="star-map">
+    <iframe src="https://virtualsky.lco.global/embed/index.html?longitude=78.4867&latitude=17.3850&constellations=true&constellationlabels=true&showstarlabels=true&gridlines_az=true&live=false&projection=stereo&showdate=false&showposition=false&elevation=0&datetime=2009-05-10T00:00:00" width="100%" height="400" frameborder="0"></iframe>
+    <p>This is how the sky looked over Hyderabad on your birthday — magical, just like you.</p>
+  </div>
+
+  <h2>Compliment Generator</h2>
+  <div class="generator">
+    <p id="compliment">Click the button for a little smile!</p>
+    <button onclick="newCompliment()">Get Compliment</button>
+  </div>
+
+  <h2>Quote Generator</h2>
+  <div class="generator">
+    <p id="quote">Click to read a special thought.</p>
+    <button onclick="newQuote()">Get Quote</button>
+  </div>
+
+  <h2>Digital Cake Celebration</h2>
+  <div class="cake">
+    <img src="https://i.ibb.co/jZfJtD9/digital-cake.gif" alt="Birthday Cake" style="width: 300px;" />
+    <p>Make a wish and blow the candles—your magic already works.</p>
+  </div>
+
+  <h2>Unsent Messages</h2>
+  <div class="unsent">
+    <ul>
+      <li>I don’t always know what to say, but I always want to talk to you.</li>
+      <li>That ‘hehehe’ of yours? I’ve grown fond of it. Weird, right?</li>
+      <li>If you ever feel low, just know someone’s smiling because of you right now.</li>
+      <li>You might never read between my lines, but you’re always inside them.</li>
+      <li>I tease a lot, but only because silence with you feels too far.</li>
+    </ul>
+  </div>
+
+  <h2>Final Surprise</h2>
+  <div class="final-message">
+    <p>This site... was made for you. Every tap, scroll, word, and emoji—only for you. Don’t wonder who—it’s you. Always has been.</p>
+  </div>
+
+  <h2>Your Poem</h2>
+  <div class="poem">
+    <p class="poem-text">
+Noticed In Silence, Her Keepsake Awoke
+
+
+Near your name, I hovered, never pressed,
+A message typed, then backspaced and suppressed.
+The “okay” you dropped stayed loud inside my screen,
+More felt in pause than anything you mean.
+
+Inked in soft green shirts and black that flows,
+In blue that walked where every question goes.
+I sent you sweets — you laughed and left it there,
+But something lingered warm between the air.
+
+Silence wrapped you close like a soft refrain,
+The way you’d speak in quiet made me strain.
+Your “hehehe” — too casual to be deep —
+Still echoed in the way I couldn't sleep.
+
+Her faith stood firm while mine dissolved in why,
+You knelt in grace, I questioned every sky.
+Yet still I watched you fold your hands and knew
+That doubt in me still bowed in front of you.
+
+Kind were not your words, but what you left —
+A half-sent reel, a typing pause, a theft.
+I called you “great,” you rolled your eyes and sighed,
+But saved the praise beneath your sideways pride.
+
+Aura wasn’t light — it was your shade,
+The quiet moves, the way your silence played.
+You never said too much, and yet you shone,
+In every part of you I met alone.
+
+
+Now each “maybe” I reread like prose,
+You meant “yes” once — I felt it, I suppose.
+You’d tease and change the subject halfway through,
+But I still caught the part you thought I knew.
+
+I knew your silence more than you suspect,
+Each “ok” text I took apart, unchecked.
+You said “good going” once — and just that line
+Stayed longer than replies you left behind.
+
+She sent a reel, said, “Know yourself?” and smiled,
+I watched and wrote, and overthought it wild.
+You said, “Perhaps,” then typed a stray “hmm” too —
+A joke to you, a journey to go through.
+
+Her word “lite” held more than she would show,
+I mocked it, then just watched the silence grow.
+A skill, a shrug, a reel, a vanishing grace —
+She left, but left the stillness in her place.
+
+Kept each chat that sounded just like rain,
+The trickle of her meaning wrapped in plain.
+A “thank you” here, a “demnn” I didn’t miss —
+Each half-reply felt full enough as bliss.
+
+And if she finds these verses in a scroll,
+Don't blink and guess, don't wonder if you stole
+A thought or two that sounds like something true.
+Don’t wonder if it’s you.
+It is.
+It always was you.
+</p>
+  </div>
+
+  <h2>Memory Lane</h2>
+  <div class="timeline-entry">
+    <img src="Timeline1.jpg" alt="Memory 1" />
+    <p><strong>Sept 19:</strong> You thought I liked someone in our class</p>
+    <img src="Timeline2.jpg" alt="Memory 2" />
+    <p><strong>Oct 4:</strong> I played with your stalker</p>
+    <img src="Timeline3.jpg" alt="Memory 3" />
+    <p><strong>Oct 13:</strong> Your first hehehe</p>
+    <img src="Timeline4.jpg" alt="Memory 4" />
+    <p><strong>Oct 14:</strong> You confirmed you were a magician</p>
+    <img src="Timeline5.jpg" alt="Memory 5" />
+    <p><strong>Nov 9:</strong> You told me about the ghosts in school</p>
+    <img src="Timeline6.jpg" alt="Memory 6" />
+    <p><strong>Nov 26:</strong> You taught your first lesson to me</p>
+    <img src="Timeline7.jpg" alt="Memory 7" />
+    <p><strong>Jan 20:</strong> You became a stand-up comedian in class</p>
+    <img src="Timeline8.jpg" alt="Memory 8" />
+    <p><strong>Feb 13:</strong> I successfully irritated you with my emojis</p>
+    <img src="Timeline9.jpg" alt="Memory 9" />
+    <p><strong>Mar 15:</strong> You hate your middle name</p>
+    <img src="Timeline10.jpg" alt="Memory 10" />
+    <p><strong>Mar 16:</strong> I stopped you from becoming cruel</p>
+    <img src="Timeline11.jpg" alt="Memory 11" />
+    <p><strong>Apr 30:</strong> I know you say maybe when you mean yes</p>
+    <img src="Timeline12.jpg" alt="Memory 12" />
+    <p><strong>May 1:</strong> Your favourite response</p>
+    <img src="Timeline13.jpg" alt="Memory 13" />
+    <p><strong>May 2:</strong> International Harry Potter Day</p>
+    <img src="Timeline14.jpg" alt="Memory 14" />
+    <p><strong>May 10:</strong> Happy Birthday Nishka!!!</p>
+  </div>
+
+  <h2>Nishka's Archive: Through My Eyes</h2>
+  <div class="archive-entry">
+    <img src="Archive1.jpg" alt="Nishka 1" />
+    <p>Green suits you , but so does every colour</p>
+    <img src="Archive2.jpg" alt="Nishka 2" />
+    <p>You smile like you know it's unfair how good you look and still do it anyway</p>
+    <img src="Archive3.jpg" alt="Nishka 3" />
+    <p>You weren't posing ,ayou were unintentionally rewriting grace</p>
+    <img src="Archive4.jpg" alt="Nishka 4" />
+    <p>If elegance had a version wrapped in teenage magic this would be it</p>
+    <img src="Archive5.jpg" alt="Nishka 5" />
+    <p>Eyes that carry question s , calm & chaos - sometimes all at once</p>
+    <img src="Archive6.jpg" alt="Nishka 6" />
+    <p>Some photos are pretty , others make silenc pause & this is one of those</p>
+    <img src="Archive7.jpg" alt="Nishka 7" />
+    <p>Black never looked better but maybe it's just you setting standard</p>
+    <img src="symbolic1.jpg" alt="Symbolic 1" />
+   
+</div>
+</section>
+
+  </div>
+  <script>
+    const loaderLines = [
+      "Loading soft chaos...",
+      "Spell-checking emotions...",
+      "Summoning digital chocolates...",
+      "Rendering memories...",
+      "Unpacking hehehe..."
+    ];
+    let i = 0;
+    const loaderText = document.getElementById("loaderLine");
+    const loader = document.getElementById("loader");
+    const content = document.getElementById("content");setInterval(() => {
+  loaderText.innerText = loaderLines[i % loaderLines.length];
+  i++;
+}, 2000);
+
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    loader.style.display = "none";
+    content.classList.remove("hidden");
+  }, 6000);
+});
+
+const compliments = [
+  "You light up the page like you light up the room.",
+  "Your laugh is more magical than a Patronus.",
+"Your smile could rewrite the dullest days.",
+"You make silence feel like a symphony.",
+"When you say 'maybe,' it somehow sounds like poetry.",
+"Even your ‘hehehe’ has its own charm.",
+"You could start a new chapter just by walking in.",
+"You laugh like you know magic.",
+"You wear calm like a crown.",
+"There's something about your ‘hmm’—it lingers.",
+"You're not just graceful, you're magnetic.",
+"I don’t need stars when I have your texts.",
+"You make ‘okay’ feel like a sentence worth framing.",
+"You redefine what ‘effortless’ looks like.",
+"I overthink less when you’re around—sometimes.",
+"You say the most with the fewest words.",
+"You’re lowkey the plot twist I didn’t see coming.",
+"Conversations with you feel like bookmarked moments.",
+"You have the kind of presence that poems try to describe.",
+"You're the highlight of my notifications.",
+"Even your sarcasm is oddly comforting.",
+"You read like my favorite book and act like the ending I hoped for.",
+"You're more addictive than late-night thoughts.",
+"Your texts are what Shakespeare would’ve written—if he had WhatsApp.",
+"You're the kind of distraction I’d happily fail for.",
+"You could make a dull Tuesday feel like a scene from a romcom.",
+"You’re the only maybe I’d say yes to.",
+"Your eye-rolls deserve their own applause.",
+"You're better than every song I’ve ever looped.",
+"I think you invented the word 'intriguing.'",
+"You glow differently when you talk about what you love.",
+"I could decode your silence before any dictionary.",
+"You're the bookmark in my chaos.",
+"You give 'graceful' an actual definition.",
+"Every time you go quiet, I write poetry.",
+"You don’t just enter rooms—you change the atmosphere.",
+"You're the reason I double-check my texts.",
+"You carry mystery like it’s made for you.",
+"You're poetry I want to read out loud.",
+"You’re the softest kind of unforgettable.",
+"If confidence had a face, it’d be yours.",
+"You're the reason the word 'spellbound' exists.",
+"You bring chaos in the most beautiful ways.",
+"You’re the calm before my storm of overthinking.",
+"You’re not just great—you’re rare.",
+"You outshine metaphors I haven’t even written yet.",
+"Even your laziness has personality.",
+"You could say 'hmm' and still win an argument.",
+"You're one of those 'right person, wrong paragraph' stories—but I’m rewriting it.",
+"You have the kind of smile that lingers longer than goodbye.",
+"You turn every awkward pause into charm.",
+"You don’t realize it, but you carry gold in your silence.",
+"You wear stubborn like it’s art.",
+"You break logic with grace.",
+"You have the most poetic version of chaos in your laugh.",
+"You’re every author’s favorite muse without knowing it.",
+"I don’t think you understand how distracting you are.",
+"You’re proof that confidence doesn’t have to shout.",
+"You make the word ‘grt ppl’ sound like a confession.",
+"You could turn essays into blushing emojis.",
+"You’re the kind of girl a plot twist would give up for.",
+"You're a soft kind of storm.",
+"You overthink like a poet and react like a queen.",
+"You're not just a vibe—you’re the playlist.",
+"You're exactly what 'meant to be' sounds like.",
+"Every time I call you 'grt ppl,' it’s secretly a love poem.",
+"You're my favorite maybe.",
+"You radiate class in lowercase.",
+"You're the only person whose silence feels safe.",
+"You turn ‘I was just kidding’ into mystery.",
+"You have the most attractive brand of honesty.",
+"You make wrong answers sound right.",
+"You’re that ‘I can’t explain it’ feeling I keep getting.",
+"You laugh like you know I’m listening too hard.",
+"You always win, even when you're unsure.",
+"You're one of those once-in-a-lifetime people who call it coincidence.",
+"You pull off mystery better than any novel.",
+"You could charm the algorithm if you wanted.",
+"You leave people wondering what just hit them.",
+"You're the only person who makes ‘lite’ sound heavy.",
+"You don’t just exist—you mark calendars.",
+"You're a blend of logic and heartache.",
+"You're the only kind of overthinking I don't regret.",
+"You turn jokes into conversations that stay overnight in my mind.",
+"You're the unexpected plot twist that makes the whole story worth it.",
+"You’ve got a face that could break silence.",
+"You have that main character energy—minus the drama.",
+"You manage to be chaos and comfort in one.",
+"You wear independence like your best outfit.",
+"You’re the pause that makes everything else feel too fast.",
+"You have that 'seen at 2 AM' kind of importance.",
+"You're the reason I believe in 2 AM thoughts.",
+"You're not just an aesthetic—you’re a feeling.",
+"Even your bad days look poetic.",
+"You're every 'hehehe' I reread when things go quiet.",
+"You could make a dictionary jealous.",
+"You’re the reason 'timing' feels personal.",
+"You’re the note I never skip.",
+"You're the plot I overthink and still want to read again.",
+"You bring meaning to the mundane.",
+"You’re the definition of depth—written in smiles.",
+"You're the only notification I never want to mute.",
+"You're every star I didn’t know I wished for.",
+"You’re not just hard to forget—you’re easy to keep remembering.",
+"You're the closest thing to ‘always’ I’ve ever met.",
+"You're the only one who makes ‘maybe’ sound romantic.",
+  "You're made of stardust and something sweeter."
+];
+
+const quotes = [
+  "She was poetry wrapped in quiet.",
+  "Sometimes a ‘hehehe’ says more than words.",
+"She never needed to shout—her silence did the talking.",
+"Some people enter your life like songs—she entered like a whole playlist.",
+"She wasn't confusing, she was just more than one chapter.",
+"Her ‘maybe’ was the softest form of a yes.",
+"She was poetry that accidentally learned to text.",
+"Not even the stars sparkle like she does when she's passionate.",
+"Her mind wandered like mine did—just more gracefully.",
+"She didn’t answer every question, but she made you forget why you asked.",
+"Her sarcasm was a shade of affection in disguise.",
+"She made peace feel like a person.",
+"She hid love in jokes and left it for you to decode.",
+"The world had loud stories—she wrote quiet epics.",
+"If elegance had a timestamp, it would align with her typing bubble.",
+"She made me believe that real magic can be found in green, black, and blue.",
+"She wasn’t unpredictable—she was poetry without punctuation.",
+"Sometimes her 'hmm' meant more than a conversation.",
+"She taught me that overthinking can be beautiful when it’s about the right person.",
+"She didn’t steal my heart—she convinced it to walk over.",
+"Even her delays feel deliberate—as if time pauses around her.",
+"She laughed like she'd seen the secret ending of life.",
+"She turned overthinking into an art I happily mastered.",
+"She wore quiet like it was custom-stitched just for her.",
+"Even when she was wrong, she made me wish I agreed.",
+"She smiled like she knew the weight of her words.",
+"The day I met her, metaphors started making sense.",
+"Her 'okay' stayed longer in my head than full novels.",
+"Some people arrive with noise—she arrived with meaning.",
+"She didn’t change me; she reminded me who I wanted to be.",
+"Every ‘hehehe’ felt like she was writing her name in my thoughts.",
+"She was never just a chapter—she was the prologue I didn’t know I needed.",
+"I thought I liked calm until I met her chaos.",
+"She wasn’t hard to understand; she was just worth understanding.",
+"She didn’t walk in—she rewrote the tone of the room.",
+"Every emoji she used had emotional subtitles.",
+"She believed in temples, I believed in thoughts—yet somehow we both prayed.",
+"Even her rejections sounded like compliments.",
+"She could’ve been a magician—because every conversation felt enchanted.",
+"She was never meant to stay quiet; the world just isn’t fluent in her language yet.",
+"Her faith was strong enough to make my doubts kneel.",
+"She wasn’t poetic because she wrote poems, but because she made people want to.",
+"She turned scrolling into smiling.",
+"Her silence wasn’t empty—it was just filled with unsent truths.",
+"She looked like Sundays and felt like summers.",
+"She’s not addictive—she’s just everything the heart forgot to ask for.",
+"She was never late—she arrived precisely when the moment needed magic.",
+"Her questions felt like home.",
+"She taught me that timing matters—but so do people who wait.",
+"She’s the kind of person whose name you highlight in memory.",
+"Every time I wanted to let go, she made me want to hold on softer.",
+"Her opinions came wrapped in warmth.",
+"She argued like she was proving love, not winning points.",
+"She isn’t complicated—she’s just layered like a story worth rereading.",
+"Even her flaws felt familiar.",
+"She wasn’t just the muse—she rewrote the genre.",
+"Every time she went offline, the world got quieter.",
+"Her eyes didn’t sparkle—they questioned.",
+"She was my favorite sentence in a language I wasn’t fluent in yet.",
+"She doesn’t text—she leaves emotional fingerprints.",
+"She wasn’t a crush; she was a collision of comfort and curiosity.",
+"Her replies were half-words, full-feelings.",
+"She had the power to ruin a bad day with a ‘you okay?’",
+"She turned ‘I’ll see’ into a promise worth waiting for.",
+"She made typing bubbles exciting again.",
+"She was never mine to lose—just a blessing to notice.",
+"Her memory didn’t fade—it grew background music.",
+"She redefined the term ‘grt ppl’ for me.",
+"I didn’t fall in love—I noticed and never looked away.",
+"She had a way of turning reality into storybook rhythm.",
+"She smiled like mischief, loved like mystery.",
+"She never had to ask for attention—it gravitated toward her.",
+"Her chaos matched the part of me I kept quiet.",
+"She wasn't perfect—she was poetry with edges.",
+"She was the bold part in my monologue.",
+"She wasn’t interested in being adored—just understood.",
+"She became every ‘hehe’ in every screenshot I saved.",
+"She wasn’t the storm—I was. She was the calm that read the weather.",
+"Every conversation with her felt like a mental bookmark.",
+"She was worth a thousand overthought replies.",
+"Even her sighs carried weight.",
+"She had the kind of presence that made silence uncomfortable after she left.",
+"She wasn’t asking for attention—just hoping for meaning.",
+"She sent reels—I wrote stories from them.",
+"She gave space, not distance.",
+"She was the ‘almost’ that made ‘never’ feel too harsh.",
+"Even her ‘No’ sounded poetic.",
+"She didn’t reply fast—but when she did, it felt like home.",
+"She said 'lite'—I heard lightning.",
+"Her typing speed didn’t match her impact.",
+"She was the reason why I kept retyping the same message.",
+"Even when we argued, I learned something beautiful.",
+"She didn’t just block silence—she taught me to listen.",
+"She was the only person who could turn 'ok' into a plot twist.",
+"I didn’t like her. I admired her existence in my story.",
+"Her voice echoed in my doubts, but comforted the answers.",
+"She never explained—yet I understood everything.",
+"Her presence felt like a footnote in destiny.",
+"She wasn’t made for the crowd—she was made for the caption.",
+"She answered the questions I didn’t know how to ask.",
+"She wasn’t looking for the spotlight—just somewhere warm to stand.",
+"She’s not the dream—I’m just wide awake finally noticing her.",
+  "The stars only shine this bright for some."
+];
+
+function newCompliment() {
+  const c = compliments[Math.floor(Math.random() * compliments.length)];
+  document.getElementById("compliment").innerText = c;
+}
+
+function newQuote() {
+  const q = quotes[Math.floor(Math.random() * quotes.length)];
+  document.getElementById("quote").innerText = q;
+}
+
+  </script>
+</body>
+</html>
